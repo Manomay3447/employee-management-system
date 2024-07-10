@@ -1,0 +1,58 @@
+<html>
+	<head>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'all.css' %}">
+	</head>
+	<body>
+		<center>
+			<form method = 'POST' action='/updateemp/{{emp.id}}'>
+				{% csrf_token %}
+				<div class='container'>
+				<br>
+				<div class='form-group row'>
+					<label class='col-sm-1 col-form-label'></label>
+					<div class='col-sm-4'>
+					<h3>Update Details</h3>
+					</div>
+				</div>
+				<div class='form-group row'>
+					<label class='col-sm-2 col-form-label'>Emp Name:</label>
+					<div class='col-sm-4'>
+						<input type='text' name='empname' id='empname' required maxlength='20' value='{{emp.emp_name}}'/>
+					</div>
+				</div>
+				<div class='form-group row'>
+					<label class='col-sm-2 col-form-label'>Emp Contact No:</label>
+					<div class='col-sm-4'>
+						<input type='text' name='empcont' id='empcont' required maxlength='10' value='{{emp.emp_contact_no}}'/>
+					</div>
+				</div>
+				<div class='form-group row'>
+					<label class='col-sm-2 col-form-label'>Emp Address:</label>
+					<div class='col-sm-4'>
+						<input type='text' name='empadd' id='empadd' required maxlength='30' value='{{emp.emp_address}}'/>
+					</div>
+				</div>
+				<div class='form-group row'>
+					<label class='col-sm-2 col-form-label'>Emp designation:</label>
+					<div class='col-sm-4'>
+						<input type='text' name='empdesg' id='empdesg' required maxlength='20' value='{{emp.emp_designation}}'/>
+					</div>
+				</div>
+				<div class='form-group row'>
+					<label class='col-sm-2 col-form-label'>Emp department Id:</label>
+					<div class='col-sm-4'>
+						<input type='text' name='empdeptid' id='empdeptid' required maxlength='20' value='{{emp.dept}}'/>
+					</div>
+				</div>
+				<div class='form-group row'>
+					<label class='col-sm-2 col-form-label'></label>
+					<div class='col-sm-4'>
+						<button type="submit" class"btn btn-success">Update</button>
+					</div>
+				</div>
+
+			</form>
+		</center>
+	</body>
+</html>

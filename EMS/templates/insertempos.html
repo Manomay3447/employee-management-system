@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+                <title>Insert Page</title>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'all.css' %}">
+        </head>
+<body>
+        <h1>Insert Records</h1>
+	<center>
+		<form name='insertdata' method='post' action='insertinempos'>
+			{% csrf_token %}
+			<pre>
+				Emp_id : <input type='text' name='eid' width='200'><br>
+				os_salary : <input type='text' name='empsal' width='200'><br>
+			<input type='submit' name='ins' value='Click here to Insert' width='300' height='100'>
+			</pre>
+		</form>
+	</center>	
+</body>
+</html>
+

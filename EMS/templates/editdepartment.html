@@ -1,0 +1,33 @@
+<html>	<head>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'all.css' %}">
+	</head>
+	<body>
+		<center>
+			<form method = 'POST' action='/updatedepartment/{{department.id}}'>
+				{% csrf_token %}
+				<div class='container'>
+				<br>
+				<div class='form-group row'>
+					<label class='col-sm-1 col-form-label'></label>
+					<div class='col-sm-4'>
+					<h3>Update Details</h3>
+					</div>
+				</div>
+				<div class='form-group row'>
+					<label class='col-sm-2 col-form-label'>Department Name:</label>
+					<div class='col-sm-4'>
+						<input type='text' name='deptname' id='deptname' required maxlength='20' value='{{department.dept_name}}'/>
+					</div>
+				</div>
+				<div class='form-group row'>
+					<label class='col-sm-2 col-form-label'></label>
+					<div class='col-sm-4'>
+						<button type="submit" class"btn btn-success">Update</button>
+					</div>
+				</div>
+
+			</form>
+		</center>
+	</body>
+</html>

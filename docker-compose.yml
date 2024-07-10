@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0.37
+    environment:
+      MYSQL_ROOT_PASSWORD: 3447
+      MYSQL_DATABASE: EMS1
+      MYSQL_USER: myuser1
+      MYSQL_PASSWORD: 3447
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+
+  web:
+    build: .
+    command: gunicorn --bind 0.0.0.0:8000 employee_management.wsgi:application
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
+

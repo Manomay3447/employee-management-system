@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+                <title>Modify Page</title>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'all.css' %}">
+
+        </head>
+<body>
+        <h1>Modify Records from Tables</h1>
+        <center>
+                <div class="containers">
+                <a href="/modifyemp" ><button type="button">Employee</button></a><br>
+                <a href="/modifyempos" ><button type="button">Employee on site</button></a><br>
+                <a href="/modifyempwfh" ><button type="button">Employee work from home</button></a><br>
+                <a href="/modifydepartment" ><button type="button">Department</button></a><br>
+                <a href="/modifyproject" ><button type="button">Project</button></a><br>
+                <a href="/modifyleave" ><button type="button">Leaves</button></a><br>
+                <a href="/modifytakes" ><button type="button">Takes</button></a>
+        </div>
+        </center>
+</body>
+</html>
+

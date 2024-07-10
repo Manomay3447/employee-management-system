@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    /* background-color: aqua; */
+    /* background-image: linear-gradient(red, yellow);
+background-repeat: no-repeat; */
+background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(68, 64, 64));
+}
+.main{
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    /* background-color: antiquewhite; */
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container a{
+    height: 100%;
+    margin-right: 2rem;
+    box-shadow:10px 10px 20px black;
+    border-radius: 1rem;
+
+}
+.container a button{
+    height: 100%;
+    font-weight: bolder;
+    border: none;
+    border-radius: 1rem;
+    /* background-color: rgb(240, 8, 8); */
+    /* color: azure; */
+}
+
+center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+center .containers a{
+    margin-top: .5rem;
+    height: 3rem;
+    width: 16rem;
+    border-radius: 10px;
+    box-shadow:10px 10px 20px black;
+
+}
+
+center .containers a button{
+height: 100%;
+width: 100%;
+border: none;
+border-radius: 10px;
+font-weight: bolder;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }

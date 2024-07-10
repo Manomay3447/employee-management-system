@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+                <title>Insert Page</title>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'all.css' %}">
+
+        </head>
+<body>
+        <h1>Insert Records</h1>
+	<center>
+		<form name='insertdata' method='post' action='insertintakes'>
+			{% csrf_token %}
+			<pre>
+				Emp_id : <input type='text' name='eid' width='200'><br>
+				Leave_id : <input type='text' name='lid' width='200'><br>
+				Taken_date : <input type='text' name='tdate' width='200'><br>
+				Return_date : <input type='text' name='tretdate' width='200'><br>
+				Leave_available : <input type='text' name='avail' width='200'><br>
+			<input type='submit' name='ins' value='Click here to Insert' width='300' height='100'>
+			</pre>
+		</form>
+	</center>	
+</body>
+</html>
+
