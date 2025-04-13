@@ -1,6 +1,10 @@
 # Use the official Python image
 FROM python:3.10.12
 
+# Install system dependencies for mysqlclient
+RUN apt-get update \
+    && apt-get install -y default-libmysqlclient-dev build-essential
+
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
